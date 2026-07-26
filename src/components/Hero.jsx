@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "../styles/Hero.css";
 import heroVideo from "../assets/videos/hero.mp4";
-import { a } from "framer-motion/client";
-
 
 
 const stats = [
