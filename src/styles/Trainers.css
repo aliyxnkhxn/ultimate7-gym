@@ -1,0 +1,501 @@
+/* =====================================
+   TRAINERS SECTION
+===================================== */
+
+.trainers{
+    padding:60px 7% 120px;
+    background:transparent;
+    color:#fff;
+    text-align:center;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.trainers-header{
+    max-width:800px;
+    margin:0 auto 70px;
+}
+
+
+.trainers-header .section-tag{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 22px;
+
+    background:rgba(255,45,45,.12);
+
+    border:1px solid rgba(255,45,45,.35);
+
+    border-radius:12px;
+
+    color:#ff2d2d;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+
+.trainers-header .section-tag::before{
+
+    content:"";
+
+    width:8px;
+    height:8px;
+
+    background:#ff2d2d;
+
+    border-radius:50%;
+
+    box-shadow:0 0 10px #ff2d2d;
+}
+
+
+.trainers-header .section-tag:hover{
+
+    background:rgba(255,45,45,.18);
+
+    border-color:#ff2d2d;
+
+    transform:translateY(-2px);
+}
+
+
+.trainers-header h2{
+
+    font-size:58px;
+
+    font-weight:900;
+
+    line-height:1.15;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    margin-bottom:22px;
+
+    text-transform:capitalize;
+
+    text-shadow:0 0 25px rgba(255,255,255,.12);
+}
+
+.trainers-header h2 span{
+
+    color:#ff2d2d !important;
+
+    text-shadow:
+        0 0 10px rgba(255,45,45,.6),
+        0 0 25px rgba(255,45,45,.5),
+        0 0 45px rgba(255,45,45,.4);
+
+}
+
+.trainers-description{
+
+    color:#cfcfcf;
+
+    line-height:1.9;
+
+    font-size:18px;
+}
+
+
+/* =====================================
+   CARDS
+===================================== */
+
+.trainer-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:nowrap;
+}
+
+
+.trainer-card{
+
+    width:370px;
+
+    min-height:680px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.4s;
+}
+
+
+.trainer-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#ff2d2d;
+
+    box-shadow:0 20px 45px rgba(255,45,45,.25);
+}
+
+
+/* =====================================
+   IMAGE
+===================================== */
+
+.trainer-image{
+
+    height:470px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:.5s;
+}
+
+
+.trainer-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.15),
+        transparent
+    );
+
+    pointer-events:none;
+}
+
+
+.trainer-card:hover .trainer-image{
+
+    transform:scale(1.06);
+}
+
+
+/* =====================================
+   IMAGE BADGE
+===================================== */
+
+.image-badge{
+
+    position:absolute;
+
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 18px;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:16px;
+
+}
+
+
+.badge-title{
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+
+.badge-experience{
+
+    color:#ff2d2d;
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+
+/* =====================================
+   INFORMATION
+===================================== */
+
+.trainer-info{
+
+    padding:30px;
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+
+.trainer-info h3{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+}
+
+
+.trainer-role{
+
+    color:#ff2d2d;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin:10px 0 15px;
+}
+
+
+.speciality{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(255,45,45,.12);
+
+    border:1px solid rgba(255,45,45,.35);
+
+    color:#ffd2d2;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+}
+
+
+/* =====================================
+   SOCIAL ICONS
+===================================== */
+
+.social-icons{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+}
+
+
+.social-icons a{
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    font-size:20px;
+
+    transition:.35s;
+}
+
+
+.social-icons a:hover{
+
+    background:#ff2d2d;
+
+    border-color:#ff2d2d;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(255,45,45,.45);
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (min-width:768px) and (max-width:1200px){
+
+    .trainer-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:30px;
+
+    }
+
+    .trainer-card{
+
+        width:100%;
+
+        max-width:500px;
+
+        min-height:auto;
+
+    }
+
+    .trainer-image{
+
+        height:450px;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:767px){
+
+    .trainers{
+
+        padding:70px 20px 90px;
+
+    }
+
+    .trainers-header h2{
+
+        font-size:40px;
+
+    }
+
+    .trainers-description{
+
+        font-size:16px;
+
+    }
+
+    .trainer-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+    }
+
+    .trainer-card{
+
+        width:100%;
+
+        max-width:360px;
+
+        min-height:auto;
+
+    }
+
+    .trainer-image{
+
+        height:380px;
+
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width:480px){
+
+    .trainer-card{
+
+        max-width:100%;
+
+    }
+
+    .trainer-image{
+
+        height:320px;
+
+    }
+
+    .trainer-info h3{
+
+        font-size:26px;
+
+    }
+
+    .trainer-role{
+
+        font-size:16px;
+
+    }
+
+}

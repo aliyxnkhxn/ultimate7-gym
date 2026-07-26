@@ -1,0 +1,541 @@
+/* ===========================
+   MEMBERSHIP
+=========================== */
+
+.membership{
+
+    padding:60px 7% 120px;
+    background:transparent;
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+.membership::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:rgba(255,45,45,.06);
+
+    border-radius:50%;
+
+    top:-220px;
+    right:-180px;
+
+    filter:blur(120px);
+
+}
+
+
+
+.membership-header{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.membership h2{
+
+    color:white;
+
+    font-size:52px;
+
+    margin:20px 0;
+
+    font-weight:800;
+
+}
+
+.membership-header h2 span{
+
+    color:#ff2d2d !important;
+
+    text-shadow:
+        0 0 10px rgba(255,45,45,.6),
+        0 0 25px rgba(255,45,45,.5),
+        0 0 45px rgba(255,45,45,.4);
+
+}
+
+.membership-subtitle{
+
+    color:#cfcfcf;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+
+
+/* ===========================
+   CARDS
+=========================== */
+
+
+.plans-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:30px;
+
+    flex-wrap:nowrap;
+
+}
+
+
+
+.plan-card{
+
+    width:340px;
+
+    min-height:620px;
+
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+
+    padding:45px 35px;
+
+
+    position:relative;
+
+
+    transition:.35s;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.plan-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#ff2d2d;
+
+    box-shadow:
+
+    0 20px 45px rgba(255,45,45,.18);
+
+}
+
+
+
+.plan-card.active{
+
+    border:2px solid #ff2d2d;
+
+    transform:scale(1.04);
+
+    box-shadow:
+
+    0 20px 50px rgba(255,45,45,.22);
+
+}
+
+
+
+.plan-card.active:hover{
+
+    transform:scale(1.04) translateY(-10px);
+
+}
+
+
+
+/* ===========================
+   BADGE
+=========================== */
+
+
+.popular-badge{
+
+    position:absolute;
+
+    top:-16px;
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    background:#ff2d2d;
+
+    color:white;
+
+
+    font-size:12px;
+
+    font-weight:700;
+
+
+    padding:9px 20px;
+
+
+    border-radius:50px;
+
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* ===========================
+   TEXT
+=========================== */
+
+
+.plan-card h3{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-top:15px;
+
+}
+
+
+
+.plan-card h4{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+
+    margin:25px 0;
+
+
+    color:#ff2d2d;
+
+    font-size:58px;
+
+    font-weight:800;
+
+}
+
+
+
+.plan-card h4 small{
+
+    font-size:24px;
+
+    color:#ff2d2d;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.plan-card h4 span{
+
+    font-size:18px;
+
+    color:#bdbdbd;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* ===========================
+   FEATURES
+=========================== */
+
+
+.plan-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-bottom:35px;
+
+    flex:1;
+
+}
+
+
+
+.plan-card ul li{
+
+    color:#ddd;
+
+    padding:12px 0;
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.05);
+
+
+    font-size:17px;
+
+}
+
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+
+.plan-card button{
+
+    width:100%;
+
+    padding:16px;
+
+
+    border:none;
+
+    border-radius:14px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff2d2d,
+        #d60000
+    );
+
+
+    color:white;
+
+
+    font-size:17px;
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    transition:.35s;
+
+}
+
+
+
+.plan-card button:hover{
+
+    transform:translateY(-4px);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(255,45,45,.35);
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (min-width:768px) and (max-width:1200px){
+
+    .plans-container{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+
+    }
+
+    .plan-card{
+
+    width:90%;
+
+    max-width:620px;
+
+    min-height:780px;
+
+    padding:50px 45px;
+
+}
+
+    .plan-card.active{
+
+        transform:none;
+
+    }
+
+    .plan-card.active:hover{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:767px){
+
+    .membership{
+
+        padding:70px 20px 90px;
+
+    }
+
+    .membership h2{
+
+        font-size:38px;
+
+    }
+
+    .membership-subtitle{
+
+        font-size:16px;
+
+    }
+
+    .plans-container{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+    .plan-card{
+
+        width:100%;
+
+        max-width:360px;
+
+        min-height:auto;
+
+        padding:35px 28px;
+
+    }
+
+    .plan-card.active{
+
+        transform:none;
+
+    }
+
+    .plan-card.active:hover{
+
+        transform:translateY(-8px);
+
+    }
+
+    .plan-card h3{
+
+        font-size:26px;
+
+    }
+
+    .plan-card h4{
+
+        font-size:48px;
+
+    }
+
+    .plan-card h4 small{
+
+        font-size:20px;
+
+    }
+
+    .plan-card ul li{
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media(max-width:480px){
+
+    .plan-card{
+
+        max-width:100%;
+
+        padding:28px 22px;
+
+    }
+
+    .plan-card h3{
+
+        font-size:23px;
+
+    }
+
+    .plan-card h4{
+
+        font-size:40px;
+
+    }
+
+    .plan-card button{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+}
