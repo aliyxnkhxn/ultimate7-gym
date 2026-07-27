@@ -34,7 +34,7 @@ function Hero() {
 
     const introTimer = setTimeout(() => {
       setShowIntro(false);
-    }, 2200);
+    }, 1000);
 
 
     return () => clearTimeout(introTimer);
@@ -76,40 +76,20 @@ function Hero() {
 
 
       {/* Background Video */}
-      <motion.video
-
-        className="hero-video"
-
-        autoPlay
-        muted
-        loop
-        playsInline
-
-        preload="metadata"
-
-        aria-hidden="true"
-
-        initial={{
-          scale:1.08
-        }}
-
-        animate={{
-          scale:1
-        }}
-
-        transition={{
-          duration:2.5,
-          ease:"easeOut"
-        }}
-
-      >
-
-        <source 
-          src={heroVideo}
-          type="video/mp4"
-        />
-
-      </motion.video>
+      <video
+      className="hero-video"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-hidden="true"
+  >
+     <source
+      src={heroVideo}
+      type="video/mp4"
+  />
+      </video>
 
 
 
