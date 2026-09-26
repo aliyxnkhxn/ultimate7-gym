@@ -1273,12 +1273,277 @@
 }
 
 
-@media(max-width:360px){
+@media (max-width: 320px){
 
-    .features-grid{
-
-        grid-template-columns:1fr;
-
+    .about{
+        padding:50px 12px 65px;
     }
 
+    .about-heading{
+        margin-bottom:35px;
+    }
+
+    .section-divider::before,
+    .section-divider::after{
+        width:45px;
+    }
+
+    .section-divider span{
+        width:9px;
+        height:9px;
+        margin:0 10px;
+    }
+
+    .section-tag{
+        max-width:100%;
+        padding:8px 12px;
+        font-size:9px;
+        letter-spacing:1px;
+        gap:6px;
+    }
+
+    .section-tag::before{
+        width:6px;
+        height:6px;
+    }
+
+    .about-top{
+        gap:35px;
+        margin-bottom:70px;
+    }
+
+    .about-image{
+        width:100%;
+        border-radius:20px;
+    }
+
+    .about-image img{
+        height:240px;
+        border-radius:20px;
+    }
+
+    .about-content{
+        gap:20px;
+    }
+
+    .about-content h2{
+        font-size:30px;
+        letter-spacing:-1px;
+    }
+
+    .about-description{
+        font-size:13px;
+        line-height:1.65;
+    }
+
+    .about-btn{
+        width:100%;
+        padding:13px 18px;
+        font-size:14px;
+    }
+
+    .why-section{
+        margin-bottom:60px;
+    }
+
+    .why-heading{
+        font-size:28px;
+        margin:15px 0;
+    }
+
+    .why-description{
+        font-size:13px;
+        line-height:1.6;
+        margin-bottom:35px;
+    }
+
+    /* Feature cards become single column */
+    .features-grid{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .feature-card{
+        padding:22px 14px;
+        border-radius:20px;
+    }
+
+    .feature-icon{
+        font-size:30px;
+        margin-bottom:12px;
+    }
+
+    .feature-card h3{
+        font-size:17px;
+        margin-bottom:10px;
+    }
+
+    .feature-card p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+    /* Mission + Vision */
+    .mission-vision{
+        grid-template-columns:1fr;
+        gap:15px;
+        margin-top:50px;
+    }
+
+    .mission-box,
+    .vision-box{
+        padding:25px 16px;
+        border-radius:20px;
+    }
+
+    .mission-box h2,
+    .vision-box h2{
+        font-size:23px;
+        margin-bottom:14px;
+    }
+
+    .mission-box p,
+    .vision-box p{
+        font-size:13px;
+        line-height:1.6;
+    }
+
+    /* Opening hours */
+    .hours-box{
+        padding:24px 14px;
+        margin-top:30px;
+        border-radius:20px;
+    }
+
+    .clock-icon{
+        font-size:32px;
+    }
+
+    .hours-box h3{
+        font-size:22px;
+        margin-bottom:14px;
+    }
+
+    .hours-box p{
+        font-size:13px;
+        line-height:1.6;
+    }
+}
+
+
+@media (max-width: 260px){
+
+    .about{
+        padding:40px 8px 55px;
+    }
+
+    .section-divider::before,
+    .section-divider::after{
+        width:28px;
+    }
+
+    .section-divider span{
+        width:7px;
+        height:7px;
+        margin:0 7px;
+    }
+
+    .section-tag{
+        font-size:8px;
+        padding:7px 9px;
+        letter-spacing:.7px;
+    }
+
+    .about-image img{
+        height:190px;
+    }
+
+    .about-content h2{
+        font-size:25px;
+    }
+
+    .about-description{
+        font-size:12px;
+    }
+
+    .about-btn{
+        padding:11px 10px;
+        font-size:12px;
+    }
+
+    .why-heading{
+        font-size:24px;
+    }
+
+    .why-description{
+        font-size:12px;
+    }
+
+    .feature-card{
+        padding:18px 10px;
+    }
+
+    .feature-icon{
+        font-size:26px;
+    }
+
+    .feature-card h3{
+        font-size:15px;
+    }
+
+    .feature-card p{
+        font-size:11px;
+    }
+
+    .mission-box,
+    .vision-box{
+        padding:20px 10px;
+    }
+
+    .mission-box h2,
+    .vision-box h2{
+        font-size:20px;
+    }
+
+    .mission-box p,
+    .vision-box p{
+        font-size:11px;
+    }
+
+    .hours-box{
+        padding:20px 10px;
+    }
+
+    .hours-box h3{
+        font-size:19px;
+    }
+
+    .hours-box p{
+        font-size:11px;
+    }
+}
+
+
+/* =====================================================
+   PREVENT HORIZONTAL SCROLL
+===================================================== */
+
+.about,
+.about-container,
+.about-top,
+.features-grid,
+.mission-vision,
+.hours-box{
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.about img{
+    max-width:100%;
+}
+
+.about button,
+.about a{
+    max-width:100%;
+    box-sizing:border-box;
 }
