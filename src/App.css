@@ -1,287 +1,481 @@
-/* =========================
+/* =========================================================
+   ULTIMATE 7 FITNESS CENTER
+   APP.CSS
+   COMPLETE RESPONSIVE VERSION
+========================================================= */
+
+
+/* =========================================================
    GLOBAL RESET
-========================= */
+========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-body{
+body {
+    width: 100%;
+    min-height: 100vh;
 
     background:
-    linear-gradient(
-        180deg,
-        #050505 0%,
-        #080808 35%,
-        #0a0a0a 50%,
-        #080808 75%,
-        #050505 100%
-    );
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #080808 35%,
+            #0a0a0a 50%,
+            #080808 75%,
+            #050505 100%
+        );
 
-    color:#fff;
+    color: #fff;
 
-    font-family:"Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
 
-    overflow-x:hidden;
+    overflow-x: hidden;
+}
 
+#root {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 
-/* =========================
-   ROOT
-========================= */
-
-#root{
-
-    width:100%;
-
-    min-height:100vh;
-
-}
-
-
-/* =========================
+/* =========================================================
    VARIABLES
-========================= */
+========================================================= */
 
-:root{
+:root {
+    --primary-red: #C1121F;
+    --bright-red: #ff1e1e;
+    --dark-bg: #050505;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.08);
 
-    --primary-red:#C1121F;
-    --bright-red:#ff1e1e;
-    --dark-bg:#050505;
-    --card-bg:rgba(255,255,255,.05);
-    --border:rgba(255,255,255,.08);
-
+    --container-width: 1200px;
 }
 
 
-/* =========================
+/* =========================================================
    SECTIONS
-========================= */
+========================================================= */
 
-section{
-
-    position:relative;
-
-    background:transparent;
-
+section {
+    position: relative;
+    width: 100%;
+    background: transparent;
 }
 
 
-/* =========================
+/* =========================================================
    TYPOGRAPHY
-========================= */
+========================================================= */
 
 h1,
 h2,
-h3{
-
-    font-weight:800;
-
-    letter-spacing:1px;
-
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-p{
-
-    color:#cfcfcf;
-
-    line-height:1.8;
-
+p {
+    color: #cfcfcf;
+    line-height: 1.8;
 }
 
 
-/* =========================
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
    BUTTON SYSTEM
-========================= */
+========================================================= */
 
 button,
-.join-btn{
-
+.join-btn {
     background:
-    linear-gradient(
-        135deg,
-        var(--bright-red),
-        var(--primary-red)
-    );
+        linear-gradient(
+            135deg,
+            var(--bright-red),
+            var(--primary-red)
+        );
 
-    color:#fff;
+    color: #fff;
 
-    border:none;
+    border: none;
 
-    padding:14px 35px;
+    padding: 14px 35px;
 
-    border-radius:50px;
+    border-radius: 50px;
 
-    font-size:16px;
+    font-size: 16px;
 
-    font-weight:700;
+    font-weight: 700;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    transition:.35s ease;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
 
     box-shadow:
-    0 10px 30px rgba(193,18,31,.35);
-
+        0 10px 30px rgba(193, 18, 31, 0.35);
 }
 
 button:hover,
-.join-btn:hover{
-
-    transform:translateY(-4px);
+.join-btn:hover {
+    transform: translateY(-4px);
 
     box-shadow:
-    0 15px 40px rgba(255,45,45,.45);
-
+        0 15px 40px rgba(255, 45, 45, 0.45);
 }
 
 
-/* =========================
+/* =========================================================
    GLASS STYLE
-========================= */
+========================================================= */
 
-.glass-card{
+.glass-card {
+    background: var(--card-bg);
 
-    background:var(--card-bg);
+    border: 1px solid var(--border);
 
-    border:1px solid var(--border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
-    backdrop-filter:blur(20px);
+    border-radius: 28px;
 
-    -webkit-backdrop-filter:blur(20px);
-
-    border-radius:28px;
-
-    transition:.4s ease;
-
+    transition: 0.4s ease;
 }
 
-.glass-card:hover{
+.glass-card:hover {
+    transform: translateY(-10px);
 
-    transform:translateY(-10px);
-
-    border-color:rgba(255,45,45,.4);
+    border-color: rgba(255, 45, 45, 0.4);
 
     box-shadow:
-    0 20px 50px rgba(255,45,45,.18);
-
+        0 20px 50px rgba(255, 45, 45, 0.18);
 }
 
 
-/* =========================
-   LINKS
-========================= */
-
-a{
-
-    text-decoration:none;
-
-    color:inherit;
-
-}
-
-
-/* =========================
+/* =========================================================
    CONTAINER
-========================= */
+========================================================= */
 
-.container{
+.container {
+    width: 90%;
+    max-width: var(--container-width);
 
-    width:90%;
-
-    max-width:1200px;
-
-    margin:auto;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-/* =========================
+/* =========================================================
+   MEDIA ELEMENTS
+   IMPORTANT:
+   Don't force height:auto on video/canvas.
+========================================================= */
+
+img {
+    max-width: 100%;
+}
+
+video {
+    max-width: 100%;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+
+/* =========================================================
    SCROLLBAR
-========================= */
+========================================================= */
 
-::-webkit-scrollbar{
-
-    width:8px;
-
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-::-webkit-scrollbar-track{
-
-    background:#080808;
-
+::-webkit-scrollbar-track {
+    background: #080808;
 }
 
-::-webkit-scrollbar-thumb{
-
-    background:#C1121F;
-
-    border-radius:20px;
-
+::-webkit-scrollbar-thumb {
+    background: #C1121F;
+    border-radius: 20px;
 }
 
 
-/* =========================
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .glass-card {
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+}
+
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-    h1{
-        font-size:40px;
+    h1 {
+        font-size: 40px;
     }
 
-    h2{
-        font-size:32px;
+    h2 {
+        font-size: 32px;
     }
 
-    .container{
-        width:92%;
+    h3 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 92%;
     }
 
     button,
-    .join-btn{
-        padding:13px 25px;
+    .join-btn {
+        padding: 13px 25px;
     }
 
+    /* Better mobile performance */
+
+    .glass-card,
+    .stat-card {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        background: rgba(255, 255, 255, 0.08);
+    }
 }
 
-@media (max-width:768px){
 
-  .glass-card,
-  .stat-card{
-    backdrop-filter:none;
-    -webkit-backdrop-filter:none;
-    background:rgba(255,255,255,.08);
-  }
+/* =========================================================
+   SMALL MOBILE
+   480px
+========================================================= */
 
-
-@media screen and (max-width: 320px) {
+@media (max-width: 480px) {
 
     html,
-    body {
+    body,
+    #root {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
 
-    * {
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 92%;
         max-width: 100%;
     }
 
-    img,
-    video,
-    canvas {
-        max-width: 100%;
-        height: auto;
+    h1 {
+        font-size: 34px;
+        line-height: 1.15;
     }
+
+    h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    button,
+    .join-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   NARROW PHONES
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    html,
+    body,
+    #root {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+    }
+
+    section,
+    main,
+    header,
+    footer {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 1.15;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    button,
+    .join-btn {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+
+
+    /* =========================
+       COMMON GRIDS
+    ========================= */
+
+    .services-grid,
+    .membership-grid,
+    .trainers-grid,
+    .gallery-grid,
+    .reviews-grid {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: minmax(0, 1fr) !important;
+
+        gap: 10px !important;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .service-card,
+    .membership-card,
+    .trainer-card,
+    .review-card,
+    .gallery-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       FLEX CONTENT
+    ========================= */
+
+    .about-content,
+    .contact-content {
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   320px
+========================================================= */
+
+@media screen and (max-width: 320px) {
+
+    html,
+    body,
+    #root {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    /* =====================================================
+       GLOBAL WIDTH PROTECTION
+    ===================================================== */
+
+    section,
+    main,
+    header,
+    footer {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       TEXT PROTECTION
+    ===================================================== */
 
     h1,
     h2,
@@ -294,46 +488,30 @@ a{
         word-wrap: break-word;
     }
 
-    button,
-    a {
-        max-width: 100%;
+    h1 {
+        font-size: 26px !important;
+        line-height: 1.1 !important;
     }
 
-}
-
-
-@media screen and (max-width: 260px) {
-
-    html,
-    body,
-    #root {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        overflow-x: hidden !important;
+    h2 {
+        font-size: 22px !important;
+        line-height: 1.15 !important;
     }
 
-    * {
-        box-sizing: border-box;
+    h3 {
+        font-size: 17px !important;
+        line-height: 1.2 !important;
     }
 
-    img,
-    video,
-    canvas {
-        max-width: 100% !important;
-        height: auto;
+    p {
+        font-size: 11px !important;
+        line-height: 1.55 !important;
     }
 
-    /* SECTIONS */
 
-    section {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-
-    /* COMMON CONTAINERS */
+    /* =====================================================
+       CONTAINERS
+    ===================================================== */
 
     .container,
     .section-container,
@@ -345,105 +523,103 @@ a{
     .reviews-container,
     .contact-container,
     .footer-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
 
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        width: calc(100% - 16px) !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
 
         margin-left: auto !important;
         margin-right: auto !important;
+
+        padding-left: 8px !important;
+        padding-right: 8px !important;
     }
 
-    /* HEADINGS */
 
-    h1 {
-        font-size: 25px !important;
-        line-height: 1.1 !important;
-    }
-
-    h2 {
-        font-size: 21px !important;
-        line-height: 1.15 !important;
-    }
-
-    h3 {
-        font-size: 16px !important;
-    }
-
-    p {
-        font-size: 11px !important;
-        line-height: 1.55 !important;
-    }
-
-    /* GRIDS */
+    /* =====================================================
+       GRIDS
+    ===================================================== */
 
     .services-grid,
     .membership-grid,
     .trainers-grid,
     .gallery-grid,
     .reviews-grid {
+
         width: 100% !important;
+
+        min-width: 0 !important;
 
         display: grid !important;
 
-        grid-template-columns: 1fr !important;
+        grid-template-columns: minmax(0, 1fr) !important;
 
         gap: 10px !important;
     }
 
-    /* CARDS */
+
+    /* =====================================================
+       CARDS
+    ===================================================== */
 
     .service-card,
     .membership-card,
     .trainer-card,
     .review-card,
     .gallery-item {
+
         width: 100% !important;
+
         max-width: 100% !important;
+
         min-width: 0 !important;
 
         margin: 0 !important;
 
-        padding: 12px !important;
+        padding: 10px !important;
+
+        overflow: hidden;
     }
 
-    /* BUTTONS */
 
-    button,
-    .btn,
-    .join-btn {
-        max-width: 100%;
-
-        font-size: 11px !important;
-
-        padding: 9px 10px !important;
-    }
-
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
+
         width: 100% !important;
+
         max-width: 100% !important;
 
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        min-width: 0 !important;
 
         overflow: hidden !important;
+
+        padding-left: 8px !important;
+
+        padding-right: 8px !important;
     }
 
     .hero-content {
+
         width: 100% !important;
+
         max-width: 100% !important;
+
+        min-width: 0 !important;
 
         padding: 0 !important;
     }
 
     .hero-buttons {
+
         width: 100% !important;
 
         display: flex !important;
+
         flex-direction: column !important;
 
         gap: 7px !important;
@@ -451,127 +627,485 @@ a{
 
     .hero-buttons a,
     .hero-buttons button {
+
         width: 100% !important;
+
+        max-width: 100% !important;
     }
 
-    /* FLEX CONTENT */
 
-    .about-content,
-    .contact-content {
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-content {
+
         width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
 
         flex-direction: column !important;
     }
 
-    /* FORMS */
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-content {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        flex-direction: column !important;
+    }
+
+
+    /* =====================================================
+       FORMS
+    ===================================================== */
 
     input,
     textarea,
     select {
+
         width: 100% !important;
+
         max-width: 100% !important;
+
         min-width: 0 !important;
 
         font-size: 11px !important;
     }
 
-    /* NAVBAR */
+
+    /* =====================================================
+       IMAGES
+       Don't force height.
+    ===================================================== */
+
+    img {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       VIDEO
+       Don't force height:auto.
+    ===================================================== */
+
+    video {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       CANVAS / 3D
+       Keep existing canvas height.
+    ===================================================== */
+
+    canvas {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    button,
+    .btn,
+    .join-btn {
+
+        max-width: 100%;
+
+        font-size: 11px !important;
+
+        padding: 8px 10px !important;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
 
     .navbar {
+
         width: calc(100% - 8px) !important;
 
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
         height: 45px !important;
+
         min-height: 45px !important;
 
         padding: 3px 6px !important;
 
         top: 4px !important;
+
+        overflow: hidden;
     }
 
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
     .logo {
+
+        display: flex !important;
+
+        align-items: center !important;
+
         gap: 3px !important;
 
         min-width: 0 !important;
 
+        max-width: calc(100% - 32px) !important;
+
         flex: 1 1 auto !important;
 
         white-space: nowrap !important;
+
+        overflow: hidden;
     }
 
+
     .logo img {
+
         width: 28px !important;
+
         height: 28px !important;
 
         min-width: 28px !important;
+
         min-height: 28px !important;
+
+        max-width: 28px !important;
 
         flex-shrink: 0 !important;
     }
 
+
     .logo h1 {
+
         font-size: 13px !important;
 
         line-height: 1 !important;
 
-        white-space: nowrap !important;
-
         letter-spacing: -0.7px !important;
 
+        white-space: nowrap !important;
+
         flex-shrink: 0 !important;
+
+        width: max-content !important;
+
+        max-width: none !important;
     }
+
 
     .logo h1 span {
+
         display: inline !important;
+
+        white-space: nowrap !important;
     }
 
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
     .menu-toggle {
+
         width: 27px !important;
+
         height: 27px !important;
 
         min-width: 27px !important;
+
         min-height: 27px !important;
 
+        max-width: 27px !important;
+
         padding: 0 !important;
+
+        margin: 0 !important;
 
         font-size: 16px !important;
 
         flex-shrink: 0 !important;
     }
 
-    /* MOBILE MENU */
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
     .mobile-menu {
+
+        position: fixed !important;
+
         top: 52px !important;
+
+        right: -100% !important;
 
         width: calc(100vw - 12px) !important;
 
         max-width: 230px !important;
+
+        min-width: 0 !important;
 
         padding: 16px !important;
 
         gap: 12px !important;
     }
 
+
     .mobile-menu.active {
+
         right: 6px !important;
     }
 
+
     .mobile-menu a {
+
         font-size: 13px !important;
+
+        white-space: nowrap;
     }
 
-    /* FOOTER */
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
+
         width: 100% !important;
 
         max-width: 100% !important;
 
+        min-width: 0 !important;
+
         overflow: hidden !important;
 
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        padding-left: 8px !important;
+
+        padding-right: 8px !important;
     }
 }
 
+
+/* =========================================================
+   JIOPHONE 2 / ~240px
+========================================================= */
+
+@media screen and (max-width: 260px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+
+        width: calc(100% - 6px) !important;
+
+        height: 42px !important;
+
+        min-height: 42px !important;
+
+        padding: 2px 5px !important;
+
+        top: 3px !important;
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .logo {
+
+        gap: 2px !important;
+
+        max-width: calc(100% - 29px) !important;
+    }
+
+
+    .logo img {
+
+        width: 25px !important;
+
+        height: 25px !important;
+
+        min-width: 25px !important;
+
+        min-height: 25px !important;
+
+        max-width: 25px !important;
+    }
+
+
+    .logo h1 {
+
+        font-size: 11px !important;
+
+        letter-spacing: -0.8px !important;
+
+        line-height: 1 !important;
+    }
+
+
+    /* =========================
+       MENU BUTTON
+    ========================= */
+
+    .menu-toggle {
+
+        width: 24px !important;
+
+        height: 24px !important;
+
+        min-width: 24px !important;
+
+        min-height: 24px !important;
+
+        font-size: 14px !important;
+    }
+
+
+    /* =========================
+       CONTAINERS
+    ========================= */
+
+    .container,
+    .section-container,
+    .about-container,
+    .services-container,
+    .membership-container,
+    .trainers-container,
+    .gallery-container,
+    .reviews-container,
+    .contact-container,
+    .footer-container {
+
+        width: calc(100% - 12px) !important;
+
+        padding-left: 6px !important;
+
+        padding-right: 6px !important;
+    }
+
+
+    /* =========================
+       TYPOGRAPHY
+    ========================= */
+
+    h1 {
+        font-size: 22px !important;
+    }
+
+    h2 {
+        font-size: 19px !important;
+    }
+
+    h3 {
+        font-size: 15px !important;
+    }
+
+    p {
+        font-size: 10px !important;
+
+        line-height: 1.5 !important;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    button,
+    .btn,
+    .join-btn {
+
+        font-size: 10px !important;
+
+        padding: 7px 8px !important;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .service-card,
+    .membership-card,
+    .trainer-card,
+    .review-card,
+    .gallery-item {
+
+        padding: 8px !important;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .mobile-menu {
+
+        top: 48px !important;
+
+        width: calc(100vw - 8px) !important;
+
+        max-width: 225px !important;
+
+        padding: 12px !important;
+
+        gap: 9px !important;
+    }
+
+
+    .mobile-menu a {
+
+        font-size: 11px !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL OVERFLOW PROTECTION
+========================================================= */
+
+@media (max-width: 320px) {
+
+    .services-grid > *,
+    .membership-grid > *,
+    .trainers-grid > *,
+    .gallery-grid > *,
+    .reviews-grid > * {
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+    }
+
+
+    .hero *,
+    .about-content *,
+    .contact-content *,
+    .navbar * {
+
+        min-width: 0;
+    }
+    
 }

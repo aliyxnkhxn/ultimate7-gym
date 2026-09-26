@@ -1,208 +1,379 @@
-/* =========================
+/* =========================================================
    GLOBAL RESET
-========================= */
+========================================================= */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-html{
-  scroll-behavior:smooth;
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
-body{
+/* =========================================================
+   BODY
+========================================================= */
 
-  font-family:"Poppins",sans-serif;
+body {
+    width: 100%;
+    min-height: 100vh;
 
-  background:#080808;
+    font-family: "Poppins", sans-serif;
 
-  color:white;
+    background: #080808;
 
-  overflow-x:hidden;
+    color: #fff;
 
+    overflow-x: hidden;
 }
 
 
-/* =========================
+/* =========================================================
    ROOT
-========================= */
+========================================================= */
 
-#root{
+#root {
+    width: 100%;
+    min-height: 100vh;
 
-  width:100%;
-
-  min-height:100vh;
-
+    overflow-x: hidden;
 }
 
 
-/* =========================
+/* =========================================================
    COLORS
-========================= */
+========================================================= */
 
-:root{
+:root {
+    --primary-red: #C1121F;
+    --bright-red: #ff1e1e;
 
-  --primary-red:#C1121F;
+    --dark-bg: #080808;
 
-  --bright-red:#ff1e1e;
+    --card-bg: rgba(255, 255, 255, 0.05);
 
-  --dark-bg:#080808;
-
-  --card-bg:rgba(255,255,255,.05);
-
-  --border-red:rgba(193,18,31,.4);
-
+    --border-red: rgba(193, 18, 31, 0.4);
 }
 
 
-
-/* =========================
+/* =========================================================
    GLOBAL SECTION EFFECT
-========================= */
+========================================================= */
 
-section{
+section {
+    position: relative;
 
-  position:relative;
+    width: 100%;
 
-  overflow:hidden;
+    background: var(--dark-bg);
 
-  background:var(--dark-bg);
-
+    overflow: hidden;
 }
 
 
+/* =========================================================
+   RED GLOW — TOP LEFT
+========================================================= */
 
-section::before{
+section::before {
+    content: "";
 
-  content:"";
+    position: absolute;
 
-  position:absolute;
+    width: 450px;
+    height: 450px;
 
-  width:450px;
+    background: rgba(255, 45, 45, 0.08);
 
-  height:450px;
+    border-radius: 50%;
 
+    filter: blur(120px);
 
-  background:rgba(255,45,45,.08);
+    top: -180px;
+    left: -150px;
 
+    z-index: 0;
 
-  border-radius:50%;
-
-
-  filter:blur(120px);
-
-
-  top:-180px;
-
-  left:-150px;
-
-
-  z-index:0;
-
-  pointer-events:none;
-
+    pointer-events: none;
 }
 
 
+/* =========================================================
+   RED GLOW — BOTTOM RIGHT
+========================================================= */
 
-section::after{
+section::after {
+    content: "";
 
-  content:"";
+    position: absolute;
 
-  position:absolute;
+    width: 500px;
+    height: 500px;
 
+    background: rgba(255, 45, 45, 0.06);
 
-  width:500px;
+    border-radius: 50%;
 
-  height:500px;
+    filter: blur(150px);
 
+    bottom: -180px;
+    right: -150px;
 
-  background:rgba(255,45,45,.06);
+    z-index: 0;
 
-
-  border-radius:50%;
-
-
-  filter:blur(150px);
-
-
-  bottom:-180px;
-
-  right:-150px;
-
-
-  z-index:0;
-
-  pointer-events:none;
-
+    pointer-events: none;
 }
 
 
+/* =========================================================
+   SECTION CONTENT
+========================================================= */
 
-section > *{
+section > * {
+    position: relative;
 
-  position:relative;
-
-  z-index:2;
-
+    z-index: 2;
 }
 
 
-
-/* =========================
+/* =========================================================
    HEADINGS
-========================= */
-
+========================================================= */
 
 h1,
 h2,
-h3{
+h3 {
+    font-weight: 800;
 
-  font-weight:800;
-
-  letter-spacing:1px;
-
+    letter-spacing: 1px;
 }
 
 
-
-/* =========================
+/* =========================================================
    LINKS
-========================= */
+========================================================= */
 
+a {
+    text-decoration: none;
 
-a{
-
-  text-decoration:none;
-
-  color:inherit;
-
+    color: inherit;
 }
 
 
+/* =========================================================
+   MEDIA SAFETY
+========================================================= */
 
-/* =========================
+img {
+    max-width: 100%;
+}
+
+
+/*
+   Don't force height on video.
+   Hero videos can have their own dimensions.
+*/
+
+video {
+    max-width: 100%;
+}
+
+
+/*
+   React Three Fiber / 3D Canvas
+   Keep its existing height.
+*/
+
+canvas {
+    max-width: 100%;
+}
+
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+}
 
 
-@media(max-width:768px){
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-  h1{
+@media (max-width: 480px) {
 
-    font-size:40px;
+    html,
+    body,
+    #root {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 
-  }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+    }
 
 
-  h2{
+    /*
+       Smaller glow effects
+       so they don't create unnecessary
+       rendering load on small phones.
+    */
 
-    font-size:32px;
+    section::before {
+        width: 300px;
+        height: 300px;
 
-  }
+        filter: blur(90px);
 
+        top: -120px;
+        left: -120px;
+    }
+
+
+    section::after {
+        width: 320px;
+        height: 320px;
+
+        filter: blur(100px);
+
+        bottom: -120px;
+        right: -120px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+    html,
+    body,
+    #root {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    section {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+    }
+
+
+    /*
+       Reduce glow size on JioPhone/narrow screens.
+    */
+
+    section::before {
+        width: 220px;
+        height: 220px;
+
+        filter: blur(70px);
+
+        top: -100px;
+        left: -100px;
+    }
+
+
+    section::after {
+        width: 240px;
+        height: 240px;
+
+        filter: blur(75px);
+
+        bottom: -100px;
+        right: -100px;
+    }
+}
+
+
+/* =========================================================
+   JIOPHONE 2
+   ~240px
+========================================================= */
+
+@media (max-width: 260px) {
+
+    html,
+    body,
+    #root {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    section {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+    }
+
+
+    /*
+       Very small glow.
+       Keeps the background effect
+       without wasting screen space.
+    */
+
+    section::before {
+        width: 170px;
+        height: 170px;
+
+        filter: blur(55px);
+
+        top: -80px;
+        left: -80px;
+    }
+
+
+    section::after {
+        width: 180px;
+        height: 180px;
+
+        filter: blur(60px);
+
+        bottom: -80px;
+        right: -80px;
+    }
 }
