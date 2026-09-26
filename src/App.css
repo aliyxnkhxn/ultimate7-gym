@@ -262,13 +262,8 @@ a{
     background:rgba(255,255,255,.08);
   }
 
-/* =========================================
-   ULTIMATE 7
-   EXTRA SMALL DEVICES — BELOW 320px
-   JioPhone 2 / Narrow Flip Phones
-========================================= */
 
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 320px) {
 
     html,
     body {
@@ -304,6 +299,279 @@ a{
         max-width: 100%;
     }
 
+}
+
+
+@media screen and (max-width: 260px) {
+
+    html,
+    body,
+    #root {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img,
+    video,
+    canvas {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    /* SECTIONS */
+
+    section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* COMMON CONTAINERS */
+
+    .container,
+    .section-container,
+    .about-container,
+    .services-container,
+    .membership-container,
+    .trainers-container,
+    .gallery-container,
+    .reviews-container,
+    .contact-container,
+    .footer-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* HEADINGS */
+
+    h1 {
+        font-size: 25px !important;
+        line-height: 1.1 !important;
+    }
+
+    h2 {
+        font-size: 21px !important;
+        line-height: 1.15 !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+    }
+
+    p {
+        font-size: 11px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* GRIDS */
+
+    .services-grid,
+    .membership-grid,
+    .trainers-grid,
+    .gallery-grid,
+    .reviews-grid {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 10px !important;
+    }
+
+    /* CARDS */
+
+    .service-card,
+    .membership-card,
+    .trainer-card,
+    .review-card,
+    .gallery-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 12px !important;
+    }
+
+    /* BUTTONS */
+
+    button,
+    .btn,
+    .join-btn {
+        max-width: 100%;
+
+        font-size: 11px !important;
+
+        padding: 9px 10px !important;
+    }
+
+    /* HERO */
+
+    .hero {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+
+        overflow: hidden !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 0 !important;
+    }
+
+    .hero-buttons {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 7px !important;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100% !important;
+    }
+
+    /* FLEX CONTENT */
+
+    .about-content,
+    .contact-content {
+        width: 100% !important;
+
+        flex-direction: column !important;
+    }
+
+    /* FORMS */
+
+    input,
+    textarea,
+    select {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        font-size: 11px !important;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        width: calc(100% - 8px) !important;
+
+        height: 45px !important;
+        min-height: 45px !important;
+
+        padding: 3px 6px !important;
+
+        top: 4px !important;
+    }
+
+    .logo {
+        gap: 3px !important;
+
+        min-width: 0 !important;
+
+        flex: 1 1 auto !important;
+
+        white-space: nowrap !important;
+    }
+
+    .logo img {
+        width: 28px !important;
+        height: 28px !important;
+
+        min-width: 28px !important;
+        min-height: 28px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    .logo h1 {
+        font-size: 13px !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        letter-spacing: -0.7px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    .logo h1 span {
+        display: inline !important;
+    }
+
+    .menu-toggle {
+        width: 27px !important;
+        height: 27px !important;
+
+        min-width: 27px !important;
+        min-height: 27px !important;
+
+        padding: 0 !important;
+
+        font-size: 16px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+        top: 52px !important;
+
+        width: calc(100vw - 12px) !important;
+
+        max-width: 230px !important;
+
+        padding: 16px !important;
+
+        gap: 12px !important;
+    }
+
+    .mobile-menu.active {
+        right: 6px !important;
+    }
+
+    .mobile-menu a {
+        font-size: 13px !important;
+    }
+
+    /* FOOTER */
+
+    footer {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 }
 
 }
