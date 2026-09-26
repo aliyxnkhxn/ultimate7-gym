@@ -1357,7 +1357,7 @@
         margin-bottom:35px;
     }
 
-    /* Feature cards become single column */
+    
     .features-grid{
         grid-template-columns:1fr;
         gap:12px;
@@ -1430,97 +1430,50 @@
     }
 }
 
+/* =========================================
+   ABOUT — BELOW 320px
+========================================= */
 
-@media (max-width: 260px){
+@media screen and (max-width: 280px) {
 
-    .about{
-        padding:40px 8px 55px;
+    .about {
+        padding: 45px 10px;
     }
 
-    .section-divider::before,
-    .section-divider::after{
-        width:28px;
+    .about-container {
+        width: 100%;
+        padding: 0;
     }
 
-    .section-divider span{
-        width:7px;
-        height:7px;
-        margin:0 7px;
+    .about-content {
+        width: 100%;
+        text-align: center;
     }
 
-    .section-tag{
-        font-size:8px;
-        padding:7px 9px;
-        letter-spacing:.7px;
+    .about h2 {
+        font-size: 25px;
+        line-height: 1.15;
     }
 
-    .about-image img{
-        height:190px;
+    .about h3 {
+        font-size: 17px;
     }
 
-    .about-content h2{
-        font-size:25px;
+    .about p {
+        font-size: 12px;
+        line-height: 1.65;
     }
 
-    .about-description{
-        font-size:12px;
+    .about-image {
+        width: 100%;
+        margin-top: 20px;
     }
 
-    .about-btn{
-        padding:11px 10px;
-        font-size:12px;
+    .about-image img {
+        width: 100%;
+        border-radius: 14px;
     }
 
-    .why-heading{
-        font-size:24px;
-    }
-
-    .why-description{
-        font-size:12px;
-    }
-
-    .feature-card{
-        padding:18px 10px;
-    }
-
-    .feature-icon{
-        font-size:26px;
-    }
-
-    .feature-card h3{
-        font-size:15px;
-    }
-
-    .feature-card p{
-        font-size:11px;
-    }
-
-    .mission-box,
-    .vision-box{
-        padding:20px 10px;
-    }
-
-    .mission-box h2,
-    .vision-box h2{
-        font-size:20px;
-    }
-
-    .mission-box p,
-    .vision-box p{
-        font-size:11px;
-    }
-
-    .hours-box{
-        padding:20px 10px;
-    }
-
-    .hours-box h3{
-        font-size:19px;
-    }
-
-    .hours-box p{
-        font-size:11px;
-    }
 }
 
 

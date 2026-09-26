@@ -498,4 +498,58 @@
 
     }
 
+/* =========================================
+   TRAINERS — BELOW 320px
+========================================= */
+
+@media screen and (max-width: 320px) {
+
+    .trainers {
+        padding: 45px 10px;
+    }
+
+    .trainers-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .trainers h2 {
+        font-size: 25px;
+    }
+
+    .trainers-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .trainer-card {
+        width: 100%;
+
+        padding: 12px;
+
+        border-radius: 15px;
+    }
+
+    .trainer-card img {
+        width: 100%;
+        height: auto;
+
+        border-radius: 12px;
+    }
+
+    .trainer-card h3 {
+        font-size: 16px;
+    }
+
+    .trainer-card p {
+        font-size: 11px;
+    }
+
+}
+
 }

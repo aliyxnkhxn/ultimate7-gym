@@ -538,4 +538,67 @@
 
     }
 
+/* =========================================
+   MEMBERSHIP — BELOW 320px
+========================================= */
+
+@media screen and (max-width: 320px) {
+
+    .membership {
+        padding: 45px 10px;
+    }
+
+    .membership-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .membership h2 {
+        font-size: 25px;
+        line-height: 1.15;
+    }
+
+    .membership-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .membership-card {
+        width: 100%;
+
+        padding: 20px 12px;
+
+        border-radius: 15px;
+    }
+
+    .membership-card h3 {
+        font-size: 17px;
+    }
+
+    .membership-card .price {
+        font-size: 25px;
+    }
+
+    .membership-card p,
+    .membership-card li {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .membership-card button,
+    .membership-card a {
+        width: 100%;
+
+        padding: 10px;
+
+        font-size: 12px;
+    }
+
+}
+
 }

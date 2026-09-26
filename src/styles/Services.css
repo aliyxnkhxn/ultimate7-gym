@@ -644,4 +644,52 @@
 
     }
 
+/* =========================================
+   SERVICES — BELOW 320px
+========================================= */
+
+@media screen and (max-width: 320px) {
+
+    .services {
+        padding: 45px 10px;
+    }
+
+    .services-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .services h2 {
+        font-size: 25px;
+        line-height: 1.15;
+    }
+
+    .services-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+        width: 100%;
+    }
+
+    .service-card {
+        width: 100%;
+
+        padding: 18px 12px;
+
+        border-radius: 14px;
+    }
+
+    .service-card h3 {
+        font-size: 16px;
+    }
+
+    .service-card p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+}
+
 }

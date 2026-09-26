@@ -626,4 +626,49 @@
 
     }
 
+/* =========================================
+   GALLERY — BELOW 320px
+========================================= */
+
+@media screen and (max-width: 320px) {
+
+    .gallery {
+        padding: 45px 10px;
+    }
+
+    .gallery-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .gallery h2 {
+        font-size: 25px;
+    }
+
+    .gallery-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        width: 100%;
+    }
+
+    .gallery-item {
+        width: 100%;
+        overflow: hidden;
+
+        border-radius: 12px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+
+        display: block;
+    }
+
+}
+
 }

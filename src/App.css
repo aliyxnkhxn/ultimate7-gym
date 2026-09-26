@@ -262,4 +262,48 @@ a{
     background:rgba(255,255,255,.08);
   }
 
+/* =========================================
+   ULTIMATE 7
+   EXTRA SMALL DEVICES — BELOW 320px
+   JioPhone 2 / Narrow Flip Phones
+========================================= */
+
+@media screen and (max-width: 319px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        max-width: 100%;
+    }
+
+    img,
+    video,
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    button,
+    a {
+        max-width: 100%;
+    }
+
+}
+
 }

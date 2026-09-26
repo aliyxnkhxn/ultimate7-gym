@@ -606,4 +606,105 @@ body{
 
 }
 
+/* =========================================
+   NAVBAR — BELOW 320px
+========================================= */
+
+@media screen and (max-width: 320px) {
+
+    .navbar {
+        width: calc(100% - 8px);
+        min-height: 46px;
+        height: 46px;
+
+        top: 4px;
+        padding: 3px 6px;
+
+        border-radius: 999px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 4px;
+        min-width: 0;
+        flex: 1;
+
+        white-space: nowrap;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+
+        min-width: 30px;
+        flex-shrink: 0;
+    }
+
+    .logo h1 {
+        margin: 0;
+        padding: 0;
+
+        font-size: 14px;
+        line-height: 1;
+
+        white-space: nowrap;
+        word-break: keep-all;
+
+        letter-spacing: -0.5px;
+    }
+
+    .logo h1 span {
+        display: inline;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 28px;
+        height: 28px;
+
+        min-width: 28px;
+
+        padding: 0;
+        margin-left: 4px;
+
+        flex-shrink: 0;
+
+        font-size: 17px;
+    }
+
+    .mobile-menu {
+        top: 54px;
+        right: -100%;
+
+        width: calc(100vw - 12px);
+        max-width: 240px;
+
+        padding: 18px 15px;
+
+        border-radius: 16px;
+        gap: 14px;
+    }
+
+    .mobile-menu.active {
+        right: 6px;
+    }
+
+    .mobile-menu a {
+        font-size: 14px;
+    }
+
+    .mobile-menu .join-btn {
+        width: 100%;
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+}
+
 }
